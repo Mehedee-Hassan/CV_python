@@ -10,3 +10,5 @@ img_rotation = cv2.warpAffine(img, rotation_matrix, (num_cols, num_rows))
 cv2.imshow('Rotation', img_rotation)
 cv2.waitKey()
 
+# commit message : OCV_PyEx: ch1,rotation
+# resource good : youtube. com/watch?v=4I2S5Xhf24o
