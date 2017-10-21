@@ -3,9 +3,15 @@ import numpy as np
 img = cv2.imread('input.jpg')
 rows, cols = img.shape[:2]
 
-src_points = np.float32([[0,0], [cols-1,0], [0,rows-1]])
-dst_points = np.float32([[0,0], [int(0.6*(cols-1)),0], [int(0.4*(cols-1)),rows-1]])
 
+# parallalogram
+# src_points = np.float32([[0,0], [cols-1,0], [0,rows-1]])
+# dst_points = np.float32([[0,0], [int(0.6*(cols-1)),0], [int(0.4*(cols-1)),rows-1]])
+
+
+# mirrot
+src_points = np.float32([[0,0], [cols-1,0], [0,rows-1]])
+dst_points = np.float32([[cols-1,0], [0,0], [cols-1,rows-1]])
 
 
 affine_matrix = cv2.getAffineTransform(src_points, dst_points)
@@ -20,6 +26,11 @@ cv2.waitKey()
 
 
 # commit message : OCV_PyEx: ch1,affain transform
-# resource good : youtube. com/watch?v=4I2S5Xhf24o
+# # resource good : youtube. com/watch?v=4I2S5Xhf24o
 
+# We can also get the mirror image of the input image. We just need to change the control
+# points in the following way:
+
+#  src_points = np.float32([[0,0], [cols-1,0], [0,rows-1]])
+#  dst_points = np.float32([[cols-1,0], [0,0], [cols-1,rows-1]])
 
