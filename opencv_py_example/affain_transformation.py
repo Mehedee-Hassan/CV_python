@@ -12,10 +12,14 @@ affine_matrix = cv2.getAffineTransform(src_points, dst_points)
 
 img_output = cv2.warpAffine(img, affine_matrix, (cols,rows))
 
+
 cv2.imshow('Input', img)
 cv2.imshow('Output', img_output)
 
 cv2.waitKey()
 
+
 # commit message : OCV_PyEx: ch1,affain transform
 # resource good : youtube. com/watch?v=4I2S5Xhf24o
+
+
