@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 
-img = cv2.imread('input2.jpg')
+img = cv2.imread('input.jpg')
 rows, cols = img.shape[:2]
 
 kernel_identity = np.array([[0,0,0], [0,1,0], [0,0,0]])
